@@ -96,6 +96,7 @@ export function TopBar({
 		{ value: "zh", label: t("langZh") },
 		{ value: "en", label: t("langEn") },
 		{ value: "it", label: t("langIt") },
+		{ value: "pt", label: t("langPt") },
 	];
 
 	const connLabel = chat.ready ? t("connected") : chat.status === "closed" ? t("reconnecting") : t("connecting");
@@ -409,7 +410,7 @@ export function TopBar({
 						trigger={
 							<>
 								<FiGlobe />
-								<span className="chip-sub">{locale === "zh" ? t("langZh") : locale === "it" ? "IT" : "EN"}</span>
+								<span className="chip-sub">{locale === "zh" ? t("langZh") : locale === "pt" ? "PT" : locale === "it" ? "IT" : "EN"}</span>
 							</>
 						}
 						open={langOpen}

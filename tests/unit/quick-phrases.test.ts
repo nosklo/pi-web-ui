@@ -3,7 +3,7 @@ import { QUICK_PHRASE_DEFAULTS, addSeeded, parseSeeded } from "../../web/src/qui
 
 describe("QUICK_PHRASE_DEFAULTS", () => {
 	it("中英各有一套非空默认值，且符合服务端归一化约束", () => {
-		for (const locale of ["zh", "en"] as const) {
+		for (const locale of ["zh", "en", "it", "pt"] as const) {
 			const list = QUICK_PHRASE_DEFAULTS[locale];
 			expect(list.length).toBeGreaterThan(0);
 			expect(list.length).toBeLessThanOrEqual(30);
